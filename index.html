@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entraînez-vous à convertir des adresses réseau en binaire.">
+    <title>Révision binaire des adresses réseau</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <p class="eyebrow">Entraînement réseau</p>
+            <h1>Conversion en binaire</h1>
+            <p class="intro">Révisez la conversion des adresses MAC, IPv4 et IPv6.</p>
+        </header>
+
+        <section class="trainer" aria-labelledby="question">
+            <div class="field">
+                <label for="choix-type-adresse">Type d’adresse</label>
+                <select id="choix-type-adresse">
+                    <option value="">Sélectionnez un type</option>
+                    <option value="mac">Adresse MAC</option>
+                    <option value="ipv4">Adresse IPv4</option>
+                    <option value="ipv6">Adresse IPv6</option>
+                </select>
+            </div>
+
+            <div class="addressToConvert">
+                <h2 id="question">Adresse à convertir</h2>
+                <p id="address" class="address" aria-live="polite"></p>
+            </div>
+
+            <p class="hint">Écrivez les groupes binaires séparés ou à la suite. Chaque octet IPv4/MAC compte 8 bits ; chaque groupe IPv6 compte 16 bits.</p>
+
+            <form id="answer-form">
+                <label for="answer">Votre réponse en binaire</label>
+                <input
+                    type="text"
+                    id="answer"
+                    placeholder="Ex. : 11000000.10101000..."
+                    autocomplete="off"
+                    autocapitalize="off"
+                    spellcheck="false"
+                    disabled
+                >
+                <div class="actions">
+                    <button id="Check" type="submit" disabled>Vérifier</button>
+                    <button id="new-address" class="secondary" type="button" disabled>Nouvelle adresse</button>
+                </div>
+            </form>
+
+            <p id="result" class="result" role="status" aria-live="polite">Choisissez un type d’adresse pour commencer.</p>
+        </section>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>
